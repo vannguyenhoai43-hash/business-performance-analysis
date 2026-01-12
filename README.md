@@ -19,7 +19,7 @@ chỉ với một thao tác, giúp quản lý hiệu quả nhiều gian hàng tr
   - Hiệu quả theo kênh bán hàng và sản phẩm
   - Hiểu hành vi mua sắm của khách hàng
 
---
+---
 ## 2. Công cụ & kỹ thuật sử dụng
 - **Power BI:** Mô hình dữ liệu, DAX measure, dashboard tương tác
 - **Power Query (M):** ETL, xử lý dữ liệu & xây dựng Parameter động
@@ -39,7 +39,7 @@ Các nhóm dữ liệu chính bao gồm:
 - Sản phẩm
 - Khách hàng
 
-![Data Đầu vào](image/Folder_Raw_Data.png)
+![Data Đầu vào](image/project_flow.png)
 
 Power Query được sử dụng để xử lý dữ liệu đầu vào, bao gồm ghép dữ liệu nhiều tháng,
 chuẩn hóa định dạng và loại bỏ các dòng không hợp lệ.
@@ -76,14 +76,14 @@ quản lý và so sánh hiệu quả kinh doanh của nhiều shop trên cùng m
 Bên cạnh dashboard tương tác, dự án cung cấp báo cáo insight định dạng A4 
 phục vụ họp chiến lược và ra quyết định.
 
-- **Insight chính:**  
+**Insight chính:**  
 - Tăng trưởng: Doanh thu và giá trị đơn tăng ổn định, tỷ lệ chuyển đổi tốt.
 - Quảng cáo: Hiệu quả giảm trước và sau ngày sale; nghẽn ở bước "Thêm vào giỏ".
 - Kênh & SP: Livestream hiệu quả nhất; sản phẩm "Bạt che nắng" có ROAS cao.
 - Chiến dịch: Spike Day đạt kết quả tốt hơn Mini Spike.
 - Khách hàng: Chủ yếu khách mới, tỷ lệ quay lại thấp; Nam giới 25–54 tuổi là tệp khách quan trọng.
 
-- **Kế hoạch hành động:**  
+**Kế hoạch hành động:**  
 - Tăng ngân sách quảng cáo vào ngày Spike Day và Livestream.
 - Đẩy mạnh sản phẩm chủ lực tại 3 tỉnh tiềm năng: Đà Nẵng, Hải Phòng, Đồng Nai.
 - Tăng tần suất Livestream và tối ưu nội dung Video.
