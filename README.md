@@ -39,8 +39,6 @@ Các nhóm dữ liệu chính bao gồm:
 - Sản phẩm
 - Khách hàng
 
-![Data Đầu vào](image/project_flow.png)
-
 Power Query được sử dụng để xử lý dữ liệu đầu vào, bao gồm ghép dữ liệu nhiều tháng,
 chuẩn hóa định dạng và loại bỏ các dòng không hợp lệ.
 
@@ -48,11 +46,11 @@ Hệ thống Parameter được thiết kế để cho phép thay đổi mã sho
 Khi chọn shop khác, toàn bộ dữ liệu và dashboard sẽ được cập nhật tự động, giúp
 quản lý và so sánh hiệu quả kinh doanh của nhiều shop trên cùng một báo cáo.
 
-![Dashboard Overview](image/dashboard_overview.png)
+![Data Đầu vào](image/project_flow.png)
 ---
 
 ## 4. Dashboard phân tích
-*(Chèn GIF demo tính năng đổi Parameter tại đây)*
+![Data Đầu vào](image/parameter.gif)
 
 ### Các trang chính trong dashboard:
 1. **Overview:** Các chỉ số sức khỏe kinh doanh tổng quan của Shop.
