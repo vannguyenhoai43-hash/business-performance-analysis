@@ -12,12 +12,13 @@ chỉ với một thao tác, giúp quản lý hiệu quả nhiều gian hàng tr
 
 - **Đối tượng sử dụng:** Chủ shop
 - **Mục tiêu phân tích:** 
-  - Đánh giá hiệu quả kinh doanh tổng thể
-  - Tối ưu chi phí quảng cáo (Paid Ads)
+  - Đánh giá tình hình kinh doanh tổng thể
+  - Tối ưu chi phí và đánh giá rủi ro quảng cáo
+  - Hiệu suất vận hành ngày chiến dịch: Spike Day và Mini Spike Day
+  - Hiệu quả theo kênh bán hàng và sản phẩm
   - Hiểu hành vi mua sắm của khách hàng
 
----
-
+--
 ## 2. Công cụ & kỹ thuật sử dụng
 - **Power BI:** Mô hình dữ liệu, DAX measure, dashboard tương tác
 - **Power Query (M):** ETL, xử lý dữ liệu & xây dựng Parameter động
@@ -27,26 +28,35 @@ chỉ với một thao tác, giúp quản lý hiệu quả nhiều gian hàng tr
 ---
 
 ## 3. Xử lý dữ liệu & ETL
-Dữ liệu xuất từ Shopee tồn tại nhiều vấn đề về định dạng và chất lượng. 
-Power Query được sử dụng để chuẩn hóa dữ liệu trước khi phân tích:
+Dữ liệu đầu vào được tổ chức theo từng nhóm nghiệp vụ và tách riêng theo tháng. 
+Mỗi nhóm dữ liệu bao gồm nhiều file Excel, sau đó được Power BI tự động ghép lại 
+để phục vụ phân tích theo quý và theo năm.
 
-- Thiết lập **Parameter** để thay đổi mã shop linh hoạt
-- Chuẩn hóa định dạng số và kiểu dữ liệu doanh thu, chi phí
-- Xử lý các đơn hàng bị huỷ và giá trị bị thiếu
-- Tạo bảng **Dim_Date** phục vụ phân tích theo thời gian (MoM, QoQ)
+Các nhóm dữ liệu chính bao gồm:
+- Hiệu suất vận hành hằng ngày
+- Paid Ads
+- Sản phẩm
+- Khách hàng
 
+Power Query được sử dụng để xử lý dữ liệu đầu vào, bao gồm ghép dữ liệu nhiều tháng,
+chuẩn hóa định dạng và loại bỏ các dòng không hợp lệ.
+
+Hệ thống Parameter được thiết kế để cho phép thay đổi mã shop chỉ với một thao tác.
+Khi chọn shop khác, toàn bộ dữ liệu và dashboard sẽ được cập nhật tự động, giúp
+quản lý và so sánh hiệu quả kinh doanh của nhiều shop trên cùng một báo cáo.
+
+![Dashboard Overview](images/dashboard_overview.png)
 ---
 
 ## 4. Dashboard phân tích
 *(Chèn GIF demo tính năng đổi Parameter tại đây)*
 
 ### Các trang chính trong dashboard:
-1. **Overview:** Tổng quan GMV, số đơn hàng, tỷ lệ chuyển đổi
-2. **Paid Ads:** Phân tích ROAS, CIR để tối ưu ngân sách quảng cáo
-3. **Campaign Day:** So sánh hiệu quả ngày thường và các ngày Mega Sale
-4. **Product:** Phân loại sản phẩm chủ lực, sản phẩm hỗ trợ và sản phẩm tồn kho
-5. **Buyer:** Phân tích tần suất mua và nhóm khách hàng chính
-
+1. **Overview:** Các chỉ số sức khỏe kinh doanh tổng quan của Shop.
+2. **Paid Ads:** Phễu chuyển đổi, ROAS theo kênh và chi phí Ads theo từng sản phẩm.
+3. **Campaign Day:** Hiệu suất bán hàng trong ngày Spike và Mini Spike.
+4. **Product:** Hiệu suất bán hàng của từng sản phẩm theo các kênh.
+5. **Buyer:** Tần suất mua, nhóm khách hàng chính và tỷ lệ giữ chân.
 <details>
   <summary>📊 Xem hình ảnh chi tiết Dashboard</summary>
 
