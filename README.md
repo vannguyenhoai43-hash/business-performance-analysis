@@ -39,7 +39,7 @@ Các nhóm dữ liệu chính bao gồm:
 - Sản phẩm
 - Khách hàng
 
-![Data Đầu vào](images/folder.png)
+![Data Đầu vào](image/Folder_Raw_Data.png)
 
 Power Query được sử dụng để xử lý dữ liệu đầu vào, bao gồm ghép dữ liệu nhiều tháng,
 chuẩn hóa định dạng và loại bỏ các dòng không hợp lệ.
@@ -48,7 +48,7 @@ Hệ thống Parameter được thiết kế để cho phép thay đổi mã sho
 Khi chọn shop khác, toàn bộ dữ liệu và dashboard sẽ được cập nhật tự động, giúp
 quản lý và so sánh hiệu quả kinh doanh của nhiều shop trên cùng một báo cáo.
 
-![Dashboard Overview](images/dashboard_overview.png)
+![Dashboard Overview](image/dashboard_overview.png)
 ---
 
 ## 4. Dashboard phân tích
@@ -63,11 +63,11 @@ quản lý và so sánh hiệu quả kinh doanh của nhiều shop trên cùng m
 <details>
   <summary>📊 Xem hình ảnh chi tiết Dashboard</summary>
 
-  ![Overview](link_anh_1)
-  ![Paid Ads](link_anh_2)
-  ![Campaign Day](link_anh_3)
-  ![Product](link_anh_3)
-  ![Buyer](link_anh_3)
+  ![Overview](image/dashboard_Overview.png)
+  ![Paid Ads](image/dashboard_PaidAds.png)
+  ![Campaign Day](image/dashboard_Campaign.png)
+  ![Product](image/dashboard_Product.png)
+  ![Buyer](image/dashboard_Buyer.png)
 </details>
 
 ---
