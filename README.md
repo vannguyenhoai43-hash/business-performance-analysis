@@ -92,7 +92,7 @@ phục vụ họp chiến lược và ra quyết định.
 <details>
   <summary>📊 Hình ảnh báo cáo </summary>
 
-  ![Bìa](image/page1.png)
+  ![Bìa](image/pagebia.png)
   ![Page1](image/page1.png)
   ![Page2](image/page2.png)
   ![Page3](image/page3.png)
