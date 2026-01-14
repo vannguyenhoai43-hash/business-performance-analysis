@@ -103,7 +103,7 @@ phục vụ họp chiến lược và ra quyết định.
   ![Page8](image/page8.png)
   ![Page9](image/page9.png)
   ![Page10](image/page10.png)
-  ![Page11](image/page11.png)
+
 </details>
 
 ---
