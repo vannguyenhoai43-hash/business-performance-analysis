@@ -89,6 +89,22 @@ phục vụ họp chiến lược và ra quyết định.
 - Tập trung tệp khách Nam 25-54 tuổi và triển khai chăm sóc sau mua.
 
 👉 [Xem báo cáo chi tiết](https://www.canva.com/design/DAG9s3TrI1E/cRN25avmiY0nkDxe0fObDw/view?utm_content=DAG9s3TrI1E&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3d8a1d75ec#1)
+<details>
+  <summary>📊 Hình ảnh báo cáo </summary>
+
+  ![Bìa](image/page1.png)
+  ![Page1](image/page1.png)
+  ![Page2](image/page2.png)
+  ![Page3](image/page3.png)
+  ![Page4](image/page4.png)
+  ![Page5](image/page5.png)
+  ![Page6](image/page6.png)
+  ![Page7](image/page7.png)
+  ![Page8](image/page8.png)
+  ![Page9](image/page9.png)
+  ![Page10](image/page10.png)
+  ![Page11](image/page11.png)
+</details>
 
 ---
 
