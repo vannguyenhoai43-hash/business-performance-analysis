@@ -92,17 +92,32 @@ phục vụ họp chiến lược và ra quyết định.
 <details>
   <summary>📊 Hình ảnh báo cáo </summary>
 
-  ![Bìa](image/pagebia.png)
-  ![Page1](image/page1.png)
-  ![Page2](image/page2.png)
-  ![Page3](image/page3.png)
-  ![Page4](image/page4.png)
-  ![Page5](image/page5.png)
-  ![Page6](image/page6.png)
-  ![Page7](image/page7.png)
-  ![Page8](image/page8.png)
-  ![Page9](image/page9.png)
-  ![Page10](image/page10.png)
+ <!-- PAGE BÌA -->
+<p align="center">
+  <img src="image/pagebia.png" width="70%">
+</p>
+
+<!-- ROW 1 -->
+<p align="center">
+  <img src="image/page1.png" width="23%">
+  <img src="image/page2.png" width="23%">
+  <img src="image/page3.png" width="23%">
+  <img src="image/page4.png" width="23%">
+</p>
+
+<!-- ROW 2 -->
+<p align="center">
+  <img src="image/page5.png" width="23%">
+  <img src="image/page6.png" width="23%">
+  <img src="image/page7.png" width="23%">
+  <img src="image/page8.png" width="23%">
+</p>
+
+<!-- ROW 3 -->
+<p align="center">
+  <img src="image/page9.png" width="23%">
+  <img src="image/page10.png" width="23%">
+</p>
 
 </details>
 
