@@ -50,7 +50,7 @@ quản lý và so sánh hiệu quả kinh doanh của nhiều shop trên cùng m
 ---
 
 ## 4. Dashboard phân tích
-![Data Đầu vào](image/parameter.gif)
+![Data Đầu vào](image/Gif_DB.gif)
 
 ### Các trang chính trong dashboard:
 1. **Overview:** Các chỉ số sức khỏe kinh doanh tổng quan của Shop.
