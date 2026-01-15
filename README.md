@@ -62,28 +62,28 @@ quản lý và so sánh hiệu quả kinh doanh của nhiều shop trên cùng m
 <details>
   <summary>📊 Xem hình ảnh chi tiết Dashboard</summary>
 
-<table style="width: 100%; border-collapse: collapse;">
+<table style="width: 100%; border-collapse: collapse; border: none;">
   <tr>
-    <td rowspan="2" style="width: 60%; padding: 5px; vertical-align: top;">
+    <td style="width: 70%; vertical-align: top; border: none; padding-right: 10px;">
+      <p align="center"><b>TRANG TỔNG QUAN (OVERVIEW)</b></p>
       <a href="image/dashboard_Overview.png">
-        <img src="image/dashboard_Overview.png" alt="Overview Dashboard" width="100%" style="border: 1px solid #ddd; border-radius: 5px;">
+        <img src="image/dashboard_Overview.png" alt="Overview Dashboard" width="100%" style="border: 2px solid #555; border-radius: 8px;">
       </a>
     </td>
-    <td style="width: 40%; padding: 5px; vertical-align: top;">
-      <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-        <a href="image/dashboard_PaidAds.png" style="width: 49%;">
-          <img src="image/dashboard_PaidAds.png" alt="Paid Ads Dashboard" width="100%" style="border: 1px solid #ddd; border-radius: 5px;">
+    <td style="width: 30%; vertical-align: top; border: none;">
+      <p align="center"><b>CÁC TRANG CHI TIẾT</b></p>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="image/dashboard_PaidAds.png">
+          <img src="image/dashboard_PaidAds.png" alt="Paid Ads" width="100%" style="border: 1px solid #ddd; border-radius: 4px;">
         </a>
-        <a href="image/dashboard_Campaign.png" style="width: 49%;">
-          <img src="image/dashboard_Campaign.png" alt="Campaign Day Dashboard" width="100%" style="border: 1px solid #ddd; border-radius: 5px;">
+        <a href="image/dashboard_Campaign.png">
+          <img src="image/dashboard_Campaign.png" alt="Campaign Day" width="100%" style="border: 1px solid #ddd; border-radius: 4px;">
         </a>
-      </div>
-    <div style="display: flex; justify-content: space-between;">
-        <a href="image/dashboard_Product.png" style="width: 49%;">
-          <img src="image/dashboard_Product.png" alt="Product Dashboard" width="100%" style="border: 1px solid #ddd; border-radius: 5px;">
+        <a href="image/dashboard_Product.png">
+          <img src="image/dashboard_Product.png" alt="Product" width="100%" style="border: 1px solid #ddd; border-radius: 4px;">
         </a>
-        <a href="image/dashboard_Buyer.png" style="width: 49%;">
-          <img src="image/dashboard_Buyer.png" alt="Buyer Dashboard" width="100%" style="border: 1px solid #ddd; border-radius: 5px;">
+        <a href="image/dashboard_Buyer.png">
+          <img src="image/dashboard_Buyer.png" alt="Buyer" width="100%" style="border: 1px solid #ddd; border-radius: 4px;">
         </a>
       </div>
     </td>
