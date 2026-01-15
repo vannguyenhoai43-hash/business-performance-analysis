@@ -22,7 +22,7 @@ chỉ với một thao tác, giúp quản lý hiệu quả nhiều gian hàng tr
 ---
 ## 2. Công cụ & kỹ thuật sử dụng
 - **Power BI:** Mô hình dữ liệu, DAX measure, dashboard tương tác
-- **SQL:** : Xử lý truy vấn tính toán cho biểu đồ Cohort. [👉 Xem chi tiết ](sql/cohort_analysis)
+- **SQL:** : Xử lý truy vấn tính toán cho biểu đồ Cohort. [Cohort_SQL](sql/cohort_analysis)
 - **Power Query (M):** ETL, xử lý dữ liệu & xây dựng Parameter động
 - **Excel:** Nguồn dữ liệu đầu vào
 - **Canva:** Thiết kế báo cáo insight định dạng A4
