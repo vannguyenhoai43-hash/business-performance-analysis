@@ -1,0 +1,94 @@
+-- ==========================================
+-- MỤC ĐÍCH: Tính toán tỷ lệ giữ chân khách hàng (Cohort Retention Chart)
+-- CÔNG CỤ: SQL
+-- ĐƠN VỊ TÍNH: THEO TUẦN (WEEKLY)
+-- ==========================================
+
+-- BƯỚC 1: Xác định thời điểm mua hàng đầu tiên của mỗi khách hàng - Cohort Group
+WITH WeekFirstOrder AS 
+(
+    SELECT 
+        [BuyerID],		
+        MIN(OrderDate) AS FirstOrderDate,
+        -- Chuyển đổi ngày mua hàng đầu tiên về ngày đầu tuần tương ứng
+        DATEADD(WEEK, DATEDIFF(WEEK, 0, MIN([OrderDate])), 0) AS CohortWeekStart
+    FROM [KR_forcast].[dbo].[check]
+    GROUP BY BuyerID
+),
+
+-- BƯỚC 2: Gán mỗi đơn hàng vào nhóm Cohort tương ứng của khách hàng
+WeekOrderStart AS
+(
+    SELECT 
+        O.BuyerID,
+        O.OrderID,
+        O.OrderDate,
+        -- Xác định tuần phát sinh đơn hàng hiện tại
+        DATEADD(WEEK, DATEDIFF(WEEK, 0, O.OrderDate), 0) AS WeekOrderStart,
+        W.CohortWeekStart
+    FROM [KR_forcast].[dbo].[check] AS O
+    JOIN WeekFirstOrder AS W ON O.BuyerID = W.BuyerID
+    GROUP BY O.BuyerID, O.OrderID, W.CohortWeekStart, O.OrderDate
+),
+
+-- BƯỚC 3: Tính toán khoảng cách (Index) giữa tuần mua hàng và tuần đầu tiên
+CohortNum AS (
+    SELECT 
+        CohortWeekStart,
+        WeekOrderStart,
+        -- Tính số tuần chênh lệch (Week Number Index)
+        DATEDIFF(WEEK, CohortWeekStart, WeekOrderStart) AS WeekNum,
+        COUNT(DISTINCT(BuyerID)) AS Total_Buyer,
+        COUNT(DISTINCT(OrderID)) AS Total_Order
+    FROM WeekOrderStart
+    GROUP BY CohortWeekStart, WeekOrderStart
+),
+
+-- BƯỚC 4: Đánh mã định danh và nhãn cho các nhóm Cohort
+Final AS (
+    SELECT
+        WeekNum,
+        WeekOrderStart,
+        CohortWeekStart,
+        Total_Buyer,
+        Total_Order,
+        DENSE_RANK() OVER(ORDER BY CohortWeekStart) AS _Week,
+        CONCAT('W', DENSE_RANK() OVER(ORDER BY CohortWeekStart)) AS WeekLable
+    FROM CohortNum
+),
+
+-- BƯỚC 5: Xoay bảng (Pivot) để chuyển các chỉ số tuần về dạng cột
+_pivot AS (
+    SELECT *
+    FROM 
+    (
+        SELECT WeekLable, WeekNum, Total_Buyer, _Week
+        FROM Final
+    ) AS F
+    PIVOT(
+        SUM(Total_Buyer)
+        FOR WeekNum IN ([0],[1],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12],[13])
+    ) AS piv
+)	
+
+-- BƯỚC 6: Tính toán tỷ lệ Retention (%) tương ứng cho mỗi tuần
+-- Tỷ lệ được tính bằng: (Số khách quay lại tại tuần n) / (Số khách mua lần đầu tại tuần 0)
+SELECT 
+    WeekLable AS [Nhóm Cohort],
+    _Week AS [Thứ tự tuần],
+    ROUND(1.0 * [0]/[0], 2) AS [W0],
+    ROUND(1.0 * [1]/[0], 2) AS [W1],
+    ROUND(1.0 * [2]/[0], 2) AS [W2],
+    ROUND(1.0 * [3]/[0], 2) AS [W3],
+    ROUND(1.0 * [4]/[0], 2) AS [W4],
+    ROUND(1.0 * [5]/[0], 2) AS [W5],
+    ROUND(1.0 * [6]/[0], 2) AS [W6],
+    ROUND(1.0 * [7]/[0], 2) AS [W7],
+    ROUND(1.0 * [8]/[0], 2) AS [W8],
+    ROUND(1.0 * [9]/[0], 2) AS [W9],
+    ROUND(1.0 * [10]/[0], 2) AS [W10],
+    ROUND(1.0 * [11]/[0], 2) AS [W11],
+    ROUND(1.0 * [12]/[0], 2) AS [W12],
+    ROUND(1.0 * [13]/[0], 2) AS [W13]
+FROM _pivot
+ORDER BY _Week;
