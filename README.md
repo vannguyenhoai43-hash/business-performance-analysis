@@ -22,6 +22,7 @@ chỉ với một thao tác, giúp quản lý hiệu quả nhiều gian hàng tr
 ---
 ## 2. Công cụ & kỹ thuật sử dụng
 - **Power BI:** Mô hình dữ liệu, DAX measure, dashboard tương tác
+- **SQL:** : Xử lý truy vấn tính toán cho biểu đồ Cohort.
 - **Power Query (M):** ETL, xử lý dữ liệu & xây dựng Parameter động
 - **Excel:** Nguồn dữ liệu đầu vào
 - **Canva:** Thiết kế báo cáo insight định dạng A4
@@ -61,11 +62,33 @@ quản lý và so sánh hiệu quả kinh doanh của nhiều shop trên cùng m
 <details>
   <summary>📊 Xem hình ảnh chi tiết Dashboard</summary>
 
-  ![Overview](image/dashboard_Overview.png)
-  ![Paid Ads](image/dashboard_PaidAds.png)
-  ![Campaign Day](image/dashboard_Campaign.png)
-  ![Product](image/dashboard_Product.png)
-  ![Buyer](image/dashboard_Buyer.png)
+<table style="width: 100%; border-collapse: collapse;">
+  <tr>
+    <td rowspan="2" style="width: 60%; padding: 5px; vertical-align: top;">
+      <a href="image/dashboard_Overview.png">
+        <img src="image/dashboard_Overview.png" alt="Overview Dashboard" width="100%" style="border: 1px solid #ddd; border-radius: 5px;">
+      </a>
+    </td>
+    <td style="width: 40%; padding: 5px; vertical-align: top;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+        <a href="image/dashboard_PaidAds.png" style="width: 49%;">
+          <img src="image/dashboard_PaidAds.png" alt="Paid Ads Dashboard" width="100%" style="border: 1px solid #ddd; border-radius: 5px;">
+        </a>
+        <a href="image/dashboard_Campaign.png" style="width: 49%;">
+          <img src="image/dashboard_Campaign.png" alt="Campaign Day Dashboard" width="100%" style="border: 1px solid #ddd; border-radius: 5px;">
+        </a>
+      </div>
+    <div style="display: flex; justify-content: space-between;">
+        <a href="image/dashboard_Product.png" style="width: 49%;">
+          <img src="image/dashboard_Product.png" alt="Product Dashboard" width="100%" style="border: 1px solid #ddd; border-radius: 5px;">
+        </a>
+        <a href="image/dashboard_Buyer.png" style="width: 49%;">
+          <img src="image/dashboard_Buyer.png" alt="Buyer Dashboard" width="100%" style="border: 1px solid #ddd; border-radius: 5px;">
+        </a>
+      </div>
+    </td>
+  </tr>
+</table>
 </details>
 
 ---
