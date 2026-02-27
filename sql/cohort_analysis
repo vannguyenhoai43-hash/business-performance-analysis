@@ -4,7 +4,10 @@
 -- ĐƠN VỊ TÍNH: THEO TUẦN (WEEKLY)
 -- ==========================================
 
+---------------------------------------------------------------------------------
 -- BƯỚC 1: Xác định thời điểm mua hàng đầu tiên của mỗi khách hàng - Cohort Group
+---------------------------------------------------------------------------------
+
 WITH WeekFirstOrder AS 
 (
     SELECT 
@@ -16,7 +19,10 @@ WITH WeekFirstOrder AS
     GROUP BY BuyerID
 ),
 
+---------------------------------------------------------------------
 -- BƯỚC 2: Gán mỗi đơn hàng vào nhóm Cohort tương ứng của khách hàng
+---------------------------------------------------------------------
+
 WeekOrderStart AS
 (
     SELECT 
@@ -31,7 +37,10 @@ WeekOrderStart AS
     GROUP BY O.BuyerID, O.OrderID, W.CohortWeekStart, O.OrderDate
 ),
 
+-----------------------------------------------------------------------------
 -- BƯỚC 3: Tính toán khoảng cách (Index) giữa tuần mua hàng và tuần đầu tiên
+-----------------------------------------------------------------------------
+
 CohortNum AS (
     SELECT 
         CohortWeekStart,
@@ -44,7 +53,10 @@ CohortNum AS (
     GROUP BY CohortWeekStart, WeekOrderStart
 ),
 
+---------------------------------------------------------
 -- BƯỚC 4: Đánh mã định danh và nhãn cho các nhóm Cohort
+---------------------------------------------------------
+
 Final AS (
     SELECT
         WeekNum,
@@ -57,7 +69,10 @@ Final AS (
     FROM CohortNum
 ),
 
+-------------------------------------------------------------------
 -- BƯỚC 5: Xoay bảng (Pivot) để chuyển các chỉ số tuần về dạng cột
+-------------------------------------------------------------------
+
 _pivot AS (
     SELECT *
     FROM 
@@ -71,8 +86,11 @@ _pivot AS (
     ) AS piv
 )	
 
+-------------------------------------------------------------------------------------------
 -- BƯỚC 6: Tính toán tỷ lệ Retention (%) tương ứng cho mỗi tuần
 -- Tỷ lệ được tính bằng: (Số khách quay lại tại tuần n) / (Số khách mua lần đầu tại tuần 0)
+-------------------------------------------------------------------------------------------
+
 SELECT 
     WeekLable AS [Nhóm Cohort],
     _Week AS [Thứ tự tuần],
