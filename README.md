@@ -1,5 +1,4 @@
-# Phân tích hiệu quả kinh doanh shop (Q3/2025)
-Power BI Dashboard
+# Phân tích hiệu quả kinh doanh shop theo quý
 
 ---
 
