@@ -1,12 +1,12 @@
 # Phân tích hiệu quả kinh doanh shop theo quý
-### Power BI Dashboard được thiết kế để hỗ trợ quyết định hàng hàng quý cho chủ shop
+
 ---
 
 ## 1. Tổng quan dự án
-Dự án này tập trung phân tích tình hình kinh doanh của shop theo quý trên sàn thương mại điện tử Shopee, 
+Dự án này tập trung phân tích tình hình kinh doanh của shop theo quý trên sàn thương mại điện tử, 
 nhằm hỗ trợ chủ shop đưa ra quyết định tối ưu doanh thu và chi phí marketing.
 
-Dashboard được thiết kế với cơ chế **Parameter động**, cho phép thay đổi mã shop và cập nhật toàn bộ dữ liệu 
+Dashboard được thiết kế với cơ chế **Parameter động** của Power BI, cho phép thay đổi mã shop và cập nhật toàn bộ dữ liệu 
 chỉ với một thao tác, giúp quản lý hiệu quả nhiều gian hàng trên cùng một báo cáo.
 
 - **Đối tượng sử dụng:** Chủ shop
@@ -19,11 +19,11 @@ chỉ với một thao tác, giúp quản lý hiệu quả nhiều gian hàng tr
   - Hiểu hành vi mua sắm của khách hàng
 
 ---
+
 ## 2. Công cụ & kỹ thuật sử dụng
 - **Power BI:** Mô hình dữ liệu, DAX measure, dashboard tương tác
 - **SQL:** : Xử lý truy vấn tính toán cho biểu đồ Cohort [Xem tại đây](sql/cohort_analysis).
 - **Power Query (M):** ETL, xử lý dữ liệu & xây dựng Parameter động
-- **Excel:** Nguồn dữ liệu đầu vào
 - **Canva:** Thiết kế báo cáo insight định dạng A4
 
 ---
@@ -59,7 +59,7 @@ quản lý và so sánh hiệu quả kinh doanh của nhiều shop trên cùng m
 4. **Product:** Hiệu suất bán hàng của từng sản phẩm theo các kênh.
 5. **Buyer:** Tần suất mua, nhóm khách hàng chính và tỷ lệ giữ chân.
 <details>
-  <summary>📊 Xem hình ảnh chi tiết Dashboard</summary>
+  <summary> Xem hình ảnh chi tiết Dashboard</summary>
 
  ![Overview](image/dashboard_Overview.png)
   ![Paid Ads](image/dashboard_PaidAds.png)
