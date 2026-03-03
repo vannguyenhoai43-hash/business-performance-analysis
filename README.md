@@ -1,5 +1,5 @@
 # Phân tích hiệu quả kinh doanh shop theo quý
-
+Power BI Dashboard được thiết kế để hỗ trợ quyết định hàng hàng quý cho chủ shop
 ---
 
 ## 1. Tổng quan dự án
