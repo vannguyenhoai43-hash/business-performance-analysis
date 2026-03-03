@@ -1,5 +1,5 @@
 # Phân tích hiệu quả kinh doanh shop (Q3/2025)
-Power BI Dashboard hỗ trợ quản lý đa gian hàng & tối ưu marketing
+Power BI Dashboard
 
 ---
 
