@@ -1,6 +1,6 @@
 # Quarterly Shop Business Performance Analysis
 
-Read in: **English** | [Tiếng Việt](README_VI.md)
+Read in: **English** | [Tiếng Việt](README_VI.MD)
 
 ---
 
