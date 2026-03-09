@@ -104,6 +104,7 @@ Thay vì phải xây lại báo cáo riêng hoặc thay file nguồn thủ công
 ### SQL cho phân tích cohort
 Tôi sử dụng **SQL** để chuẩn bị **bảng cohort mua đầu tiên** phục vụ trực quan hóa theo hướng retention, giúp theo dõi hành vi mua lại theo thời gian dễ hơn thay vì chỉ nhìn vào số lượng người mua tổng hợp.
 
+[SQL_Cohort](sql/cohort_analysis)
 ---
 
 ## Insight mẫu:
