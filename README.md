@@ -4,143 +4,139 @@ Read in: **English** | [Tiếng Việt](README_VI.MD)
 
 ---
 
-## 1. Project Overview
+## Project Overview
 
-This project focuses on analyzing a shop’s quarterly business performance on an e-commerce platform,  
-aiming to support shop owners in optimizing revenue and marketing costs.
+**Revenue growth alone is not enough to judge whether a shop is performing well.** A shop can grow sales while still leaking ad efficiency, over-relying on a few products or channels, and failing to convert new buyers into repeat customers.
 
-The dashboard is built using **dynamic Parameters** in Power BI, allowing users to switch shop codes and automatically refresh the entire dataset with a single action. This enables efficient management of multiple shops within the same report.
+This project builds a **quarterly business performance dashboard** for e-commerce shop review, designed to diagnose performance across **revenue, advertising, campaigns, products, channels, and customer behavior**.
 
-- **Target users:** Shop owners  
-- **Industry:** Automotive Accessories  
-- **Analysis objectives:**  
-  - Evaluate overall business performance  
-  - Optimize costs and assess advertising risks  
-  - Analyze operational performance on campaign days: Spike & Mini Spike  
-  - Evaluate performance by sales channel and product  
-  - Understand customer purchasing behavior  
+Using **Power BI**, **Power Query**, and **SQL**, I built a reusable workflow that consolidates fragmented monthly files, prepares cohort logic, and allows the same dashboard structure to refresh across **multiple shops within one reporting structure** through a **shop-code parameter**. The goal is not just to visualize performance, but to make recurring business review faster, more consistent, and more actionable.
 
 ---
 
-## 2. Tools & Techniques
+## Dataset
 
-- **Power BI:** Data modeling, DAX measures, interactive dashboards  
-- **SQL:** Query processing and calculations for Cohort analysis visualization [View here](sql/cohort_analysis)  
-- **Power Query (M):** ETL processing, data transformation & dynamic Parameter setup  
-- **Canva:** Insight report design in A4 format  
+The dashboard consolidates monthly Excel files across a **quarterly reporting window (Jul–Sep 2025)** into one reusable reporting model.
 
----
+Main source groups include:
 
-## 3. Data Processing & ETL
+- **Daily operational data**
+- **Paid Ads data**
+- **Product-level data**
+- **Customer-level data**
 
-Input data is organized by business function and separated by month.  
-Each data group consists of multiple Excel files, which are automatically consolidated in Power BI  
-to enable quarterly and yearly analysis.
+Key analytical grains include:
 
-Main data groups include:
+- **daily performance level**
+- **product level**
+- **customer level**
+- **campaign-day level**
 
-- Daily operational performance  
-- Paid Ads  
-- Product data  
-- Customer data  
-
-Power Query is used for:
-
-- Merging multi-month datasets  
-- Standardizing formats  
-- Removing invalid rows  
-
-A dynamic Parameter system is designed to allow switching shop codes with a single action.  
-When selecting a different shop, the entire dataset and dashboard update automatically,  
-enabling performance management and comparison across multiple shops within one unified report.
-
-![Input Data](image/project_flow.png)
+The reporting model is designed for **multi-shop reuse** through a **shop-code parameter**, so the same dashboard structure can be refreshed across different shops without rebuilding separate reports.
 
 ---
 
-## 4. Analytical Dashboard
+## What I Built
 
-![Dashboard](image/Gif_DB.gif)
-
-### Main dashboard pages:
-
-1. **Overview:** Overall business health metrics of the shop  
-2. **Paid Ads:** Conversion funnel, ROAS by channel, and advertising cost by product  
-3. **Campaign Day:** Sales performance during Spike and Mini Spike events  
-4. **Product:** Sales performance of each product across channels  
-5. **Buyer:** Purchase frequency, key customer segments, and retention rate  
-
-<details>
-  <summary> View detailed dashboard screenshots</summary>
-
-  ![Overview](image/dashboard_Overview.png)  
-  ![Paid Ads](image/dashboard_PaidAds.png)  
-  ![Campaign Day](image/dashboard_Campaign.png)  
-  ![Product](image/dashboard_Product.png)  
-  ![Buyer](image/dashboard_Buyer.png)
-
-</details>
+- Built a **Power BI dashboard** covering business health, ads, campaigns, products, and buyers
+- Built a **reusable shop-code parameter** so the same dashboard structure can refresh across different shops without rebuilding separate reports
+- Used **Power Query** to merge monthly files with matching schemas into one reporting model
+- Used **SQL** to prepare **first-purchase cohort tables** for retention-style visualization
+- Designed a lightweight **insight summary** for business review and action planning
 
 ---
 
-## 5. Insights & Action Plan
+## Analytical Logic
 
-In addition to the interactive dashboard, the project provides an A4-formatted insight report  
-to support strategic meetings and decision-making.
+The dashboard is structured around five analytical lenses:
 
-**Key insights:**  
+### 1. Business Health
+Used **orders, revenue, ad spend, AOV, and conversion rate** to assess whether topline growth came with stronger efficiency.
 
-- **Growth:** Revenue and average order value increased steadily, with strong conversion rates.  
-- **Advertising:** Performance declined before and after campaign days; bottleneck identified at the “Add to Cart” stage.  
-- **Channels & Products:** Livestream is the most effective channel; the “Sunshade Cover” product delivers the highest ROAS.  
-- **Campaigns:** Spike Day outperformed Mini Spike.  
-- **Customers:** Mostly new customers, with a low repeat rate; males aged 25–54 represent the key customer segment.  
+![Overview](image/dashboard_Overview.png)
 
-**Action plan:**  
+### 2. Advertising Efficiency
+Used **ROAS, cost per order, conversion funnel drop-off, and product-level ad contribution** to identify where ad spend was converting well and where it was leaking.
 
-- Increase advertising budget on Spike Day and Livestream sessions.  
-- Prioritize core products in three high-potential provinces: Da Nang, Hai Phong, and Dong Nai.  
-- Increase Livestream frequency and optimize video content.  
-- Stimulate demand with vouchers and promotional messages before/after campaign days.  
-- Focus on male customers aged 25–54 and strengthen post-purchase engagement strategies.  
+![Paid Ads](image/dashboard_PaidAds.png)
 
-👉 [View full insight report](https://www.canva.com/design/DAG9s3TrI1E/cRN25avmiY0nkDxe0fObDw/view?utm_content=DAG9s3TrI1E&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3d8a1d75ec#1)
+### 3. Campaign Effectiveness
+Compared **Mini Spike vs Spike Day** using **orders, revenue, ad spend, AOV, and ROAS** to evaluate which campaign window produced better return.
 
-<details>
-  <summary>📊 Insight report preview</summary>
+![Campaign Day](image/dashboard_Campaign.png)
 
-<!-- COVER PAGE -->
-<p align="center">
-  <img src="image/pagebia.png" width="70%">
-</p>
+### 4. Product and Channel Contribution
+Measured **revenue concentration, ROAS by product, and channel mix** to identify the **highest-return product-channel combinations**.
 
-<!-- ROW 1 -->
-<p align="center">
-  <img src="image/page1.png" width="23%">
-  <img src="image/page2.png" width="23%">
-  <img src="image/page3.png" width="23%">
-  <img src="image/page4.png" width="23%">
-</p>
+![Product](image/dashboard_Product.png)
 
-<!-- ROW 2 -->
-<p align="center">
-  <img src="image/page5.png" width="23%">
-  <img src="image/page6.png" width="23%">
-  <img src="image/page7.png" width="23%">
-  <img src="image/page8.png" width="23%">
-</p>
+### 5. Customer Retention Pattern
+Used **buyer growth, order frequency, and cohort retention** to evaluate whether growth was driven mainly by **new-buyer acquisition** or supported by **repeat purchase behavior**.
 
-<!-- ROW 3 -->
-<p align="center">
-  <img src="image/page9.png" width="23%">
-  <img src="image/page10.png" width="23%">
-</p>
+![Buyer](image/dashboard_Buyer.png)
+---
 
-</details>
+## Data Preparation Logic
+
+A key challenge in this project was turning fragmented monthly files into a model that could support recurring business review.
+
+### Power Query
+I used **Power Query (M)** to:
+
+- merge files across months
+- align datasets with the same structure
+- standardize column formats
+- remove invalid rows
+- create one reusable reporting layer across functions
+
+This made it possible to combine scattered monthly files into one dashboard model instead of maintaining separate files for each month or business function.
+
+### Dynamic Parameter Design
+I built a **shop-code parameter** so the same dashboard could be reused across multiple shops.
+
+Instead of rebuilding separate reports or manually replacing source files, users can change the shop code once and refresh the full dataset under the same analytical structure. This turns the dashboard from a one-off report into a **scalable reporting template**.
+
+![Demo parameter](image/Gif_DB.gif)
+
+### SQL for Cohort Analysis
+I used **SQL** to prepare **first-purchase cohort tables** for retention-style visualization, making it easier to track repeat purchase behavior over time instead of relying only on aggregate buyer counts. [SQL_Cohort](sql/cohort_analysis)
 
 ---
 
-## 6. Results Achieved
+## Key Findings
 
-- Reduced manual reporting time from 4 hours to under 5 minutes using the dynamic Parameter mechanism  
-- Identified the product group contributing ~60% of total profit to prioritize marketing investment  
+- The shop recorded **10.32K orders**, **$60.33K revenue**, and **7.15% conversion rate** in the quarter, while **AOV reached $5.84**. Revenue grew **+3.65% QoQ** while ad spend stayed nearly flat at **$5.59K (-0.18%)**, suggesting topline growth improved without a matching increase in paid spend.
+
+- Advertising efficiency was uneven. Although **ROAS reached 9.01**, the biggest funnel drop happened at **Click → Add to Cart (-77.70%)**, showing that the main priority should be improving deeper-funnel conversion rather than just driving more traffic.
+
+- **Livestream** was the strongest-performing paid channel, with ROAS rising from **7.84** in July to **8.79** in September. At product level, **Sunshade Cover** delivered the highest **ROAS at 13.32**, making this the clearest channel-product combination to scale.
+
+- **Spike Day** outperformed **Mini Spike** with **ROAS 9.43 vs 8.69**, despite lower ad spend share (**39.07% vs 60.93%**), suggesting budget should be concentrated more heavily on Spike Day.
+
+- Growth remained acquisition-led. Out of **9.54K buyers**, **8.59K were new buyers**, while average order frequency was only **1.08** and median cohort retention fell from **5.49% (week 2)** to **4.09% (week 6)**, indicating the need for stronger post-purchase retention efforts.
+
+
+---
+
+## Scope & Limitation
+
+This project is designed for **business diagnosis and recurring performance review**, not forecasting or causal experimentation.
+
+Its strength lies in identifying **patterns, bottlenecks, concentration risk, and action priorities** from quarterly shop, ads, product, and customer data. Cohort analysis is included to support repeat-purchase reading, but long-term retention conclusions remain limited by the available historical window.
+
+---
+
+## Deliverables
+
+- **Power BI dashboard** with 5 analytical pages
+- **Dynamic parameter setup** for multi-shop refresh
+- **SQL cohort logic** for repeat purchase visualization
+- **Insight summary report** for business review
+
+---
+
+## Results
+
+- Reduced manual reporting time from **4 hours to under 5 minutes** through the dynamic parameter setup
+- Built a reusable reporting structure that can refresh across **multiple shops** without rebuilding separate dashboards
+- Identified a product group contributing around **60% of total profit**, supporting more focused marketing investment
