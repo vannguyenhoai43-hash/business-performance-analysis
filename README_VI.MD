@@ -109,8 +109,6 @@ Tôi sử dụng **SQL** để chuẩn bị **bảng cohort mua đầu tiên** p
 
 ## Các phát hiện chính
 
-## Key Findings
-
 - Trong quý, shop ghi nhận **10,32K đơn hàng**, **60,33K USD doanh thu** và **tỷ lệ chuyển đổi 7,15%**, trong khi **AOV đạt 5,84 USD**. Doanh thu tăng **+3,65% QoQ**, trong khi chi tiêu quảng cáo gần như đi ngang ở mức **5,59K USD (-0,18%)**, cho thấy tăng trưởng tổng thể được cải thiện mà không đi kèm mức tăng tương ứng ở ngân sách quảng cáo.
 
 - Hiệu quả quảng cáo chưa đồng đều. Dù **ROAS đạt 9,01**, điểm rơi lớn nhất của phễu nằm ở bước **Click → Add to Cart (-77,70%)**, cho thấy ưu tiên chính nên là cải thiện khả năng chuyển đổi ở phần sâu của phễu thay vì chỉ tiếp tục đẩy thêm traffic.
