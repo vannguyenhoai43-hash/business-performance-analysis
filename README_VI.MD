@@ -108,35 +108,21 @@ Tôi sử dụng **SQL** để chuẩn bị **bảng cohort mua đầu tiên** p
 [SQL_Cohort](sql/cohort_analysis)
 ---
 
-## Insight mẫu:
+## Các phát hiện chính
 
-- Trong quý, shop ghi nhận **10,32K đơn hàng**, **60,33K USD doanh thu** và **tỷ lệ chuyển đổi 7,15%**, trong khi **AOV đạt 5,84 USD**. Doanh thu tăng **+3,65% QoQ** và AOV tăng **+10,65%**, trong khi chi tiêu quảng cáo gần như đi ngang ở mức **5,59K USD (-0,18%)**.
+## Key Findings
 
-- Hiệu quả quảng cáo chưa đồng đều. **ROAS đạt 9,01**, nhưng phễu chuyển đổi cho thấy điểm rơi rõ nhất nằm ở bước **Click → Add to Cart (-77,70%)**, tiếp theo là **Add to Cart → Orders (-67,93%)**. Điều này cho thấy vấn đề chính không nằm ở việc tạo traffic, mà nằm ở chất lượng chuyển đổi ở các bước sâu hơn trong phễu.
+- Trong quý, shop ghi nhận **10,32K đơn hàng**, **60,33K USD doanh thu** và **tỷ lệ chuyển đổi 7,15%**, trong khi **AOV đạt 5,84 USD**. Doanh thu tăng **+3,65% QoQ**, trong khi chi tiêu quảng cáo gần như đi ngang ở mức **5,59K USD (-0,18%)**, cho thấy tăng trưởng tổng thể được cải thiện mà không đi kèm mức tăng tương ứng ở ngân sách quảng cáo.
 
-- **Livestream** là kênh quảng cáo trả phí có hiệu quả tốt nhất. ROAS của kênh này tăng từ **7,84 trong tháng 7** lên **8,79 trong tháng 9**, vượt **Video** ở mức **7,06** trong tháng 9. Ở cấp độ sản phẩm, **Sunshade Cover** đạt **ROAS cao nhất là 13,32**, trở thành ưu tiên rõ ràng nhất về tổ hợp sản phẩm - kênh hiệu quả cao.
+- Hiệu quả quảng cáo chưa đồng đều. Dù **ROAS đạt 9,01**, điểm rơi lớn nhất của phễu nằm ở bước **Click → Add to Cart (-77,70%)**, cho thấy ưu tiên chính nên là cải thiện khả năng chuyển đổi ở phần sâu của phễu thay vì chỉ tiếp tục đẩy thêm traffic.
 
-- **Spike Day** vượt trội hơn **Mini Spike** với **ROAS 9,43** so với **8,69**, dù tỷ trọng chi tiêu quảng cáo thấp hơn (**39,07%** so với **60,93%**). Điều này cho thấy Spike Day tạo ra mức hoàn vốn trên mỗi đồng ngân sách tốt hơn và là khung thời điểm nên được ưu tiên tập trung ngân sách.
+- **Livestream** là kênh quảng cáo trả phí có hiệu quả tốt nhất, với ROAS tăng từ **7,84** trong tháng 7 lên **8,79** trong tháng 9. Ở cấp độ sản phẩm, **Sunshade Cover** đạt **ROAS cao nhất là 13,32**, qua đó trở thành tổ hợp kênh - sản phẩm rõ ràng nhất để tiếp tục mở rộng.
 
-- Tăng trưởng vẫn chủ yếu dựa vào thu hút khách hàng mới. Shop có **9,54K người mua**, trong đó **8,59K là người mua mới**, trong khi **tần suất mua hàng trung bình chỉ đạt 1,08**. Retention theo cohort cũng suy giảm khá nhanh, với retention trung vị giảm từ **5,49% ở tuần 2** xuống **4,09% ở tuần 6**.
+- **Spike Day** vượt **Mini Spike** về hiệu quả với **ROAS 9,43 so với 8,69**, dù chỉ chiếm tỷ trọng ngân sách quảng cáo thấp hơn (**39,07% so với 60,93%**), cho thấy ngân sách nên được tập trung mạnh hơn vào Spike Day.
 
-- Giá trị khách hàng có mức độ tập trung cao. **Người mua nam** đóng góp **80,55% doanh thu** và **75,82% số đơn hàng**, trong khi **top 5 thị trường** đóng góp **87,91% doanh thu được theo dõi**, và riêng **TP. Hồ Chí Minh đóng góp 43,7%**.
-
-- Đóng góp của sản phẩm và lợi nhuận cũng tập trung cao. **7 sản phẩm hàng đầu tạo ra 80% doanh thu**, và một nhóm sản phẩm đóng góp **hơn 60% tổng lợi nhuận**.
-
-> **Kết luận chính:** shop vẫn đang tăng trưởng, nhưng chất lượng tăng trưởng chưa đồng đều. Những cơ hội lớn nhất nằm ở việc cải thiện chuyển đổi ở phần sâu của phễu, mở rộng các tổ hợp livestream/sản phẩm có ROAS cao, và giảm phụ thuộc vào việc thu hút khách hàng mới bằng cách củng cố hành vi mua lại.
-
+- Tăng trưởng vẫn chủ yếu đến từ việc thu hút khách hàng mới. Trong tổng số **9,54K người mua**, có **8,59K là người mua mới**, trong khi **tần suất mua hàng trung bình chỉ đạt 1,08** và **retention cohort trung vị** giảm từ **5,49% (tuần 2)** xuống **4,09% (tuần 6)**, cho thấy cần tăng cường hơn nữa các hoạt động giữ chân sau mua.
+  
 ---
-
-## Hành động đề xuất
-
-Dựa trên các tín hiệu từ dashboard, những hành động chính được đề xuất gồm:
-
-- phân bổ thêm ngân sách cho **Spike Day**, khi **ROAS đạt 9,43** so với **8,69** ở Mini Spike
-- ưu tiên **Livestream** và các sản phẩm có ROAS cao như **Sunshade Cover (ROAS 13,32)**
-- tập trung xử lý điểm nghẽn **Click → Add to Cart**, nơi mức suy giảm của phễu đạt **-77,70%**
-- tăng cường hoạt động sau mua hàng, khi **8,59K / 9,54K người mua là khách hàng mới** và tần suất mua hàng trung bình chỉ ở mức **1,08**
-- tập trung đẩy chuyển đổi và sản phẩm vào nhóm khách hàng - thị trường hiệu quả nhất, đặc biệt là **người mua nam** và các thị trường trọng điểm như **TP. Hồ Chí Minh, Đà Nẵng, Đồng Nai và Hải Phòng**
 
 👉 [Xem báo cáo mẫu chi tiết](https://www.canva.com/design/DAG9s3TrI1E/cRN25avmiY0nkDxe0fObDw/view?utm_content=DAG9s3TrI1E&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3d8a1d75ec#1)
 <details>
