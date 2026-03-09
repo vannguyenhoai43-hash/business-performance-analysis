@@ -1,4 +1,4 @@
-# Quarterly Shop Business Performance Analysis
+# Quarterly E-commerce Shop Performance Diagnosis
 
 Read in: **English** | [Tiếng Việt](README_VI.MD)
 
